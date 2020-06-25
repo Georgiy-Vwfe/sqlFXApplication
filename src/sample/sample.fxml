@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <right>
+        <VBox prefHeight="200.0" prefWidth="225.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label contentDisplay="CENTER" prefHeight="33.0" prefWidth="155.0" text="Customer Name" textAlignment="CENTER">
+                    <padding>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                    </padding>
+                    <VBox.margin>
+                        <Insets left="8.0" right="8.0" />
+                    </VBox.margin>
+                </Label>
+                <TextField fx:id="nameTextField">
+                    <VBox.margin>
+                        <Insets left="8.0" right="8.0" />
+                    </VBox.margin>
+                </TextField>
+                <HBox prefHeight="100.0" prefWidth="214.0">
+                    <children>
+                        <Button fx:id="addClientBtn" alignment="BOTTOM_LEFT" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#addClient" prefWidth="150.0" style="-fx-alignment: center; -fx-background-radius: 8px;" text="Add Client" textAlignment="CENTER">
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                            <font>
+                                <Font name="Comic Sans MS" size="12.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="4.0" right="4.0" top="32.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="deleteClientBtn" alignment="BOTTOM_LEFT" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#deleteClient" prefWidth="150.0" style="-fx-alignment: center; -fx-background-radius: 10px;" text="Delete Client" textAlignment="CENTER">
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                            <font>
+                                <Font name="Comic Sans MS" size="12.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="4.0" right="4.0" top="32.0" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+        </VBox>
+    </right>
+    <left>
+        <TableView prefHeight="400.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="id" prefWidth="153.0" text="id" />
+                <TableColumn fx:id="name" minWidth="0.0" prefWidth="246.0" text="customerName" />
+            </columns>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+        </TableView>
+    </left>
+</BorderPane>
